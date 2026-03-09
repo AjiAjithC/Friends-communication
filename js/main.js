@@ -20,26 +20,19 @@ async function loadComponents() {
   await loadComponent('team', 'team.html');
   await loadComponent('contact', 'contact.html');
   await loadComponent('footer', 'footer.html');
-  
+
   // small delay to let DOM settle
   return new Promise(resolve => setTimeout(resolve, 200));
 }
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
-  const dbg = document.createElement('div');
-  // dbg.id = 'js-debug-status';
-  // dbg.className = 'fixed bottom-2 right-2 bg-green-600 text-white px-3 py-1 text-xs rounded z-50';
-  // dbg.textContent = 'JS initialized';
-  // document.body.appendChild(dbg);
-
   await loadComponents();
 
   loadProducts();
   loadServices();
 
   initializeCart();
-  initializeSlider();
   initializeModals();
   initializeSearch();
 });
@@ -51,8 +44,8 @@ async function loadProducts() {
     const response = await fetch('https://sheetdb.io/api/v1/avbq665hl1sc6');
 
     const products = await response.json();
-    console.log("products",products);
-    
+    console.log("products", products);
+
     displayProducts(products);
   } catch (error) {
     console.error('Error loading products:', error);
@@ -65,7 +58,7 @@ function displayProducts(products, filter = 'all') {
   if (!productGrid) return;
 
   const filteredProducts = filter === 'all' ? products : products.filter(p => p.category === filter);
-  
+
   productGrid.innerHTML = filteredProducts.map(product => `
     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow product-card" data-id="${product.id}">
       <div class="relative overflow-hidden">
@@ -82,11 +75,11 @@ function displayProducts(products, filter = 'all') {
           ${product.rating ? `
             <div class="flex items-center">
               <div class="flex text-yellow-400">
-                ${Array.from({length: 5}, (_, i) => 
-                  `<svg class="w-4 h-4 ${i < Math.floor(product.rating) ? 'fill-current' : 'text-gray-300'}" viewBox="0 0 20 20">
+                ${Array.from({ length: 5 }, (_, i) =>
+    `<svg class="w-4 h-4 ${i < Math.floor(product.rating) ? 'fill-current' : 'text-gray-300'}" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
                   </svg>`
-                ).join('')}
+  ).join('')}
               </div>
               <span class="text-sm text-gray-600 ml-1">(${product.rating})</span>
             </div>
@@ -168,7 +161,7 @@ document.addEventListener("change", function (e) {
 // Filter products
 async function filterProducts(category) {
   try {
-const response = await fetch('https://sheetdb.io/api/v1/avbq665hl1sc6');
+    const response = await fetch('https://sheetdb.io/api/v1/avbq665hl1sc6');
 
     // const products = await response.json();
     // const response = await fetch('data/products.json');
@@ -198,7 +191,7 @@ let allProducts = [];
 async function initializeSearch() {
   try {
     // const response = await fetch('data/products.json');
-     const response = await fetch('https://sheetdb.io/api/v1/avbq665hl1sc6');
+    const response = await fetch('https://sheetdb.io/api/v1/avbq665hl1sc6');
     allProducts = await response.json();
   } catch (err) {
     console.error('Search load error', err);
@@ -210,6 +203,9 @@ async function initializeSearch() {
 
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
+      document.getElementById("products").scrollIntoView({
+        behavior: "smooth"
+      });
       const term = e.target.value.toLowerCase();
       if (term.length > 0) {
         const filtered = allProducts.filter(p =>
@@ -222,10 +218,17 @@ async function initializeSearch() {
         displayProducts(allProducts);
       }
     });
+    // document.getElementById("products").scrollIntoView({
+    //   behavior: "smooth"
+    // });
   }
-  
+
   if (searchInput2) {
+
     searchInput2.addEventListener('input', (e) => {
+      document.getElementById("products").scrollIntoView({
+        behavior: "smooth"
+      });
       const term = e.target.value.toLowerCase();
       if (term.length > 0) {
         const filtered = allProducts.filter(p =>
@@ -238,6 +241,7 @@ async function initializeSearch() {
         displayProducts(allProducts);
       }
     });
+
   }
 
 }
@@ -289,4 +293,4 @@ function populateServiceSelect(services) {
   }
 }
 
-      // <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded request-service-btn" data-service="${service.name}">Request Service</button>
+// <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded request-service-btn" data-service="${service.name}">Request Service</button>
