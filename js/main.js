@@ -197,7 +197,8 @@ let allProducts = [];
 
 async function initializeSearch() {
   try {
-    const response = await fetch('data/products.json');
+    // const response = await fetch('data/products.json');
+     const response = await fetch('https://sheetdb.io/api/v1/avbq665hl1sc6');
     allProducts = await response.json();
   } catch (err) {
     console.error('Search load error', err);
@@ -205,8 +206,26 @@ async function initializeSearch() {
   }
 
   const searchInput = document.getElementById('search-input');
+  const searchInput2 = document.getElementById('search-input2');
+
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      if (term.length > 0) {
+        const filtered = allProducts.filter(p =>
+          p.name.toLowerCase().includes(term) ||
+          p.description.toLowerCase().includes(term) ||
+          p.category.toLowerCase().includes(term)
+        );
+        displayProducts(filtered);
+      } else {
+        displayProducts(allProducts);
+      }
+    });
+  }
+  
+  if (searchInput2) {
+    searchInput2.addEventListener('input', (e) => {
       const term = e.target.value.toLowerCase();
       if (term.length > 0) {
         const filtered = allProducts.filter(p =>

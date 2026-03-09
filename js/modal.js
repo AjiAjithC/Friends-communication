@@ -69,7 +69,7 @@ function openProductModal(product) {
     content.innerHTML = `
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
-        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover rounded-lg">
+        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-contain rounded-lg">
       </div>
       <div>
         <h4 class="text-xl font-semibold mb-2">${product.name}</h4>

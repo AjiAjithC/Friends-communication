@@ -17,7 +17,7 @@ function initializeCart() {
 }
 
 function addToCart(product) {
-  const existingItem = cart.find(item => item.id === product.id);
+  const existingItem = cart.find(item => item.id == product.id);
   if (existingItem) {
     existingItem.quantity += 1;
   } else {
@@ -61,7 +61,7 @@ function openCartModal() {
       <div class="space-y-4 mb-6">
         ${cart.map(item => `
           <div class="flex items-center space-x-4 border-b pb-4">
-            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded">
+            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-contain rounded">
             <div class="flex-1">
               <h4 class="font-medium">${item.name}</h4>
               <p class="text-sm text-gray-600">₹${item.discountPrice || item.price}</p>
@@ -85,14 +85,14 @@ function openCartModal() {
           <label class="block text-sm font-medium mb-1">Phone Number</label>
           <input type="tel" id="cart-phone" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
         </div>
-        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium">Send Enquiry via WhatsApp</button>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium">Submit Your Enquiry</button>
       </form>
     `;
 
     // Add remove event listeners
     document.querySelectorAll('.remove-from-cart').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        const productId = parseInt(e.currentTarget.dataset.id);
+        const productId = e.currentTarget.dataset.id;
         removeFromCart(productId);
       });
     });

@@ -1,34 +1,20 @@
 <header class="fixed top-0 left-0 right-0 z-40 bg-white shadow-md">
   <div class="container  px-4 py-3">
-    <div class="flex flex-col md:flex-row md:items-center justify-between">
+    <div class="flex  md:flex-row md:items-center justify-between">
       <!-- Left side: Logo and Company Name -->
       <div class="flex items-center space-x-4  justify-between">
         <div class="flex items-center ">
           <!-- <img src="../assets/Fc_logo.png" alt="Company Logo"   class="h-17 w-16  object-fill"> -->
-          <img src="https:\/\/github.com\/AjiAjithC\/Friends-comunication-Images\/blob\/main\/images\/Fc_logo.png?raw=true" alt="Company Logo"   class="h-17 w-16  object-fill">
+          <img
+            src="https://raw.githubusercontent.com/AjiAjithC/Friends-comunication-Images/refs/heads/Set2Img/images/Fc_logo.avif"
+            alt="Company Logo" class="h-17 w-16  object-fill">
           <h1 class="text-xl font-bold text-blue-600">Friends Communication</h1>
-        </div>
-        <div class="flex items-center md:hidden">
-
-          <div class="flex items-center space-x-4 ">
-            <div class="flex  items-center space-x-2 ">
-              <a href="tel:+91 9994643491" class="call-button">
-              <i class="fa fa-phone text-xl text-black-600" aria-hidden="true"></i>
-
-              </a>
-            </div>
-            <button id="cart-btn" class="relative p-2 text-gray-600 hover:text-blue-600">
-              <i class="fa fa-shopping-bag text-xl" aria-hidden="true"></i>
-              <span id="cart-count"
-                class="absolute top-0 right-0 bg-red-500 text-white text-sm font-bold rounded-full h-6 w-6 flex items-center justify-center z-10">0</span>
-            </button>
-          </div>
         </div>
 
       </div>
 
       <!-- Center: Search Bar and Category Dropdown -->
-      <div class="flex  items-center border  space-x-4 flex-1 max-w-md  mx-4">
+      <div class="hidden  md:flex items-center border  space-x-4 flex-1 max-w-md  mx-4">
         <div class="relative flex-1">
           <input type="search" id="search-input" placeholder="Search products..."
             class="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -38,10 +24,14 @@
       </div>
 
       <!-- Right side: Phone, Cart -->
-      <div class="flex items-center space-x-4 hidden md:flex">
+      <div class="flex items-center space-x-4">
         <div class="flex  items-center space-x-2">
-          <i class="fa fa-phone text-xl text-blue-600" aria-hidden="true"></i>
-          <span class="text-sm font-medium px-1">99946 43491 </span>
+          <!-- <i class="fa fa-phone text-xl text-blue-600" aria-hidden="true"></i> -->
+          <a href="tel:+91 9994643491" class="call-button flex">
+            <i class="fa fa-phone text-xl text-black-600" aria-hidden="true"></i>
+            <span class="hidden  md:flex text-sm font-medium px-1">99946 43491 </span>
+
+          </a>
         </div>
         <button id="cart-btn" class="relative p-2 text-gray-600 hover:text-blue-600">
           <i class="fa fa-shopping-bag text-xl" aria-hidden="true"></i>
@@ -49,9 +39,18 @@
             class="absolute top-0 right-0 bg-red-500 text-white text-sm font-bold rounded-full h-6 w-6 flex items-center justify-center z-10">0</span>
         </button>
       </div>
+
+
     </div>
 
-
+    <div class="flex  md:hidden items-center border  space-x-4 flex-1 max-w-md  mx-4">
+      <div class="relative flex-1">
+        <input type="search" id="search-input2" placeholder="Search products..."
+          class="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button class="absolute right-2 top-2 text-gray-500 text-xl" aria-label="Search">
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 <!-- hidden md:flex -->
