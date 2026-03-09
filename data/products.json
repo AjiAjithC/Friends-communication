@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Samsung 55\" 4K UHD Smart TV",
+    "description": "Experience stunning visuals with this 55-inch 4K UHD Smart TV featuring HDR and built-in streaming apps.",
+    "price": "599.99",
+    "discountPrice": "549.99",
+    "rating": "4.5",
+    "image": "https://github.com/AjiAjithC/Friends-comunication-Images/blob/main/images/productImage/Samsung-tv.jpg?raw=true",
+    "category": "TV"
+  },
+  {
+    "id": 2,
+    "name": "Sony 5.1 Surround Sound Speaker System",
+    "description": "Immerse yourself in rich audio with this 5.1 surround sound system, perfect for home theaters.",
+    "price": "299.99",
+    "discountPrice": "",
+    "rating": "4.2",
+    "image": "https://raw.githubusercontent.com/AjiAjithC/Friends-comunication-Images/refs/heads/main/images/productImage/Sony5.1.avif",
+    "category": "Speakers"
+  },
+  {
+    "id": 3,
+    "name": "iPhone 14 Pro 128GB",
+    "description": "The latest iPhone with advanced camera features and powerful performance.",
+    "price": "999.99",
+    "discountPrice": "949.99",
+    "rating": "4.8",
+    "image": "https://github.com/AjiAjithC/Friends-comunication-Images/blob/main/images/productImage/iPhone%2014.webp?raw=true",
+    "category": "Mobile"
+  },
+  {
+    "id": 4,
+    "name": "Wireless Bluetooth Earbuds",
+    "description": "High-quality wireless earbuds with noise cancellation and long battery life.",
+    "price": "79.99",
+    "discountPrice": "",
+    "rating": "4",
+    "image": "https://raw.githubusercontent.com/AjiAjithC/Friends-comunication-Images/refs/heads/main/images/productImage/Wireless%20Bluetooth%20Earbuds.avif",
+    "category": "Accessories"
+  },
+  {
+    "id": 5,
+    "name": "Android TV Set Top Box",
+    "description": "Stream your favorite content with this Android-powered set top box.",
+    "price": "49.99",
+    "discountPrice": "39.99",
+    "rating": "",
+    "image": "https://github.com/AjiAjithC/Friends-comunication-Images/blob/main/images/productImage/jio-android-tv-box-104.jpg?raw=true",
+    "category": "Set Top Box"
+  },
+  {
+    "id": 6,
+    "name": "Samsung 7.1 Home Theater System",
+    "description": "Complete home entertainment with 7.1 surround sound and Blu-ray player.",
+    "price": "499.99",
+    "discountPrice": "",
+    "rating": "4.3",
+    "image": "https://github.com/AjiAjithC/Friends-comunication-Images/blob/main/images/productImage/Samsunghometheater.jpg?raw=true",
+    "category": "Home Theater"
+  },
+  {
+    "id": 7,
+    "name": "LG 43\" Full HD Smart TV",
+    "description": "Affordable smart TV with Full HD resolution and smart features.",
+    "price": "349.99",
+    "discountPrice": "329.99",
+    "rating": "4.1",
+    "image": "https://github.com/AjiAjithC/Friends-comunication-Images/blob/main/images/productImage/lgTv.jpeg?raw=true",
+    "category": "TV"
+  },
+  {
+    "id": 8,
+    "name": "JBL Portable Bluetooth Speaker",
+    "description": "Compact and powerful portable speaker with waterproof design.",
+    "price": "129.99",
+    "discountPrice": "",
+    "rating": "4.4",
+    "image": "https://raw.githubusercontent.com/AjiAjithC/Friends-comunication-Images/refs/heads/main/images/productImage/JBL%20speaker.avif",
+    "category": "Speakers"
+  },
+  {
+    "id": 9,
+    "name": "Samsung Galaxy S23",
+    "description": "Flagship Android phone with exceptional camera and display.",
+    "price": "799.99",
+    "discountPrice": "749.99",
+    "rating": "4.6",
+    "image": "https://github.com/AjiAjithC/Friends-comunication-Images/blob/main/images/productImage/Samsung%20Galaxy%20S23.webp?raw=true",
+    "category": "Mobile"
+  },
+  {
+    "id": 10,
+    "name": "USB-C Charging Cable",
+    "description": "Durable USB-C cable for fast charging and data transfer.",
+    "price": "19.99",
+    "discountPrice": "",
+    "rating": "",
+    "image": "https://github.com/AjiAjithC/Friends-comunication-Images/blob/main/images/productImage/usb.webp?raw=true",
+    "category": "Accessories"
+  }
+]

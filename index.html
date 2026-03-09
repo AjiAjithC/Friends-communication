@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friends Communication - Electronics Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white pt-16">
+  <!-- Header -->
+  <div id="header"></div>
+
+  <!-- Hero Slider -->
+  <div id="slider"></div>
+
+  <!-- Products Section -->
+  <div id="products"></div>
+
+  <!-- Services Section -->
+  <div id="services"></div>
+
+  <!-- Team Section -->
+  <div id="team"></div>
+
+  <!-- Contact Section -->
+  <div id="contact"></div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Modals -->
+  <!-- Product Modal -->
+  <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold">Product Details</h3>
+            <button id="close-product-modal" class="text-gray-500 hover:text-gray-700">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div id="product-modal-content">
+            <!-- Content will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold">Your Cart</h3>
+            <button id="close-cart-modal" class="text-gray-500 hover:text-gray-700">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div id="cart-content">
+            <!-- Cart content will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Request Modal -->
+  <div id="service-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-md w-full">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold">Service Request</h3>
+            <button id="close-service-modal" class="text-gray-500 hover:text-gray-700">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <form id="service-form">
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-2">Name</label>
+              <input type="text" id="service-name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-2">Phone Number</label>
+              <input type="tel" id="service-phone" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-2">Service Type</label>
+              <select id="service-type" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <option value="">Select Service</option>
+                <option value="TV Installation">TV Installation</option>
+                <option value="AC Installation">AC Installation</option>
+                <option value="Air Cooler Setup">Air Cooler Setup</option>
+                <option value="Set Top Box Installation">Set Top Box Installation</option>
+                <option value="Home Theater Setup">Home Theater Setup</option>
+                <option value="TV Repair">TV Repair</option>
+                <option value="Radio Repair">Radio Repair</option>
+                <option value="Speaker Repair">Speaker Repair</option>
+                <option value="Mobile Repair">Mobile Repair</option>
+                <option value="Air Cooler Repair">Air Cooler Repair</option>
+                <option value="AV Device Repair">AV Device Repair</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-2">Address</label>
+              <textarea id="service-address" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" required></textarea>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-2">Problem Description</label>
+              <textarea id="service-problem" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/modal.js"></script>
+</body>
+</html>

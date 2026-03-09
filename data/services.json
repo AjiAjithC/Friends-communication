@@ -1,0 +1,79 @@
+[
+  {
+    "id": "tv-installation",
+    "name": "TV Installation",
+    "description": "Professional TV mounting and setup services",
+    "category": "indoor",
+     "icon": "tv-installation.svg"
+  },
+  {
+    "id": "ac-installation",
+    "name": "AC Installation",
+    "description": "Complete air conditioning installation and maintenance",
+    "category": "indoor",
+    "icon": "ac-installation.svg"
+  },
+  {
+    "id": "air-cooler-setup",
+    "name": "Air Cooler Setup",
+    "description": "Air cooler installation and repair services",
+    "category": "indoor",
+    "icon": "air-cooler-setup.svg"
+  },
+  {
+    "id": "set-top-box-installation",
+    "name": "Set Top Box Installation",
+    "description": "Cable and satellite set-top box setup",
+    "category": "indoor",
+    "icon": "set-top-box-installation.svg"
+  },
+  {
+    "id": "home-theater-setup",
+    "name": "Home Theater Setup",
+    "description": "Complete home entertainment system installation",
+    "category": "indoor",
+    "icon": "home-theater-setup.svg"
+  },
+  {
+    "id": "tv-repair",
+    "name": "TV Repair",
+    "description": "Professional TV repair services",
+    "category": "repair",
+    "icon": "tv-repair.svg"
+  },
+  {
+    "id": "radio-repair",
+    "name": "Radio Repair",
+    "description": "Radio repair and maintenance",
+    "category": "repair",
+    "icon": "radio-repair.svg"
+  },
+  {
+    "id": "speaker-repair",
+    "name": "Speaker Repair",
+    "description": "Speaker repair services",
+    "category": "repair",
+    "icon": "speaker-repair.svg"
+  },
+  {
+    "id": "mobile-repair",
+    "name": "Mobile Repair",
+    "description": "Mobile phone repair services",
+    "category": "repair",
+    "icon": "mobile-repair.svg"
+  },
+  {
+    "id": "air-cooler-repair",
+    "name": "Air Cooler Repair",
+    "description": "Air cooler repair and maintenance",
+    "category": "repair",
+    "icon": "air-cooler-repair.svg"
+  },
+  {
+    "id": "av-device-repair",
+    "name": "AV Device Repair",
+    "description": "Audio-visual device repair services",
+    "category": "repair",
+    "icon": "av-device-repair.svg"
+  }
+]
